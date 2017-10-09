@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DF</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style type="text/css">
+        *{padding:0;margin: 0;list-style:none;}
+        .banner-box{width: 1190px;height:400px;margin:20px auto;position:relative;text-align:center;overflow: hidden;}
+        .banner-box .img{width:7340px;position:absolute;top:0;left:0;}
+        .banner-box .img li{float:left;}
+        .banner-box .li{width:100%;position:absolute;left:0;bottom:10px;}
+        .banner-box .li li{width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;margin:0 3px;cursor:pointer;}
+        .banner-box .but{position: absolute;top:50%;margin-top:-30px;width:38px;height:60px;line-height:60px;text-align:center;font-size: 30px;background:rgba(0,0,0,0.5);color:#fff;font-family: '宋体';cursor:pointer;display: none;}
+        .banner-box:hover .but{display:block;}
+        .banner-box .but-left{left:0;}
+        .banner-box .but-right{right:0;}
+        .banner-box .li .index{background:#f60;width: 30px;border-radius:10px;}
+        .banner-box .bar{ position: absolute; left: 0; bottom: 0; height: 5px; background-color: hsla(24,100%,50%,0.5); }
+        #dis{
+            position: fixed;
+            top:0;
+            /*background: beige;*/
+            background: url("img/ad.jpg");
+            margin-left: 0 !important;
+            left: 43%;
+        }
+        .logtxt::after {
+            content: '';
+            display: block;
+            border: 1px solid red;
+            margin-top: -10px;
+            width: 165px;
+            margin-left: 59px;
+        }
+        .logtxt::before {
+            content: '';
+            display: block;
+            border: 1px solid red;
+            width: 174px;
+            margin-left: -184px;
+            position: absolute;
+            top: 10px;
+        }
+
+        .noto{
+            position: absolute;
+            top:-75px;
+            right:5px;
+            border:none !important;
+
+        }
+        #disnone{
+            display: none;
+        }
+        #disnone  .xpkw-btn{
+            background: #fff;
+            color: #FE5F93;
+            border: 1px solid #FE5F93;
+        }
+        #disnone .news{
+            background-color: #FE5F93;
+        }
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div style="display: none;z-index: 999" id="dis">
+    <div class="login" style="margin: 0px">
+        <h2 >会员登录</h2>
+        <div style="display: flex; position: relative" class="longin-man public">
+            <img src="img/登录index-对不起.png" class="noto" id="nont">
+            <img src="img/登录.png" alt="" style="margin: 0px">
+            <form action="商城.html">
+                <input type="text" placeholder="手机号/用户名/邮箱 " required>
+                <br>
+                <input type="password" required	 placeholder="请输入密码" style="    margin-top: 20px;">
+                <br>
+                <input type="submit" value="登录">
+            </form>
+
+        </div>
+        <div class="login-key public " style="display: flex   ;  margin-top: -149px">
+            <img src="img/锁头.png" alt=""  style="margin-top: 23px">
+        </div>
+        <div style="display: flex;justify-content: space-between;margin-top: 121px;"><a href="">忘记密码?</a> <a href="注册页面.html"  style="margin-right: 70px;">免费注册</a></div>
+        <div  class="logtxt">其他登录</div>
+        <div class="logo-login">
+            <span><a href=""><img src="img/微信.png" alt=""></a></span>
+            <span><a href=""><img src="img/qq.png" alt=""></a></span>
+            <span><a href=""><img src="img/微博.png" alt=""></a></span>
+        </div>
+        <div class="logo-Otxt">
+            <span><a href="">微信</a></span>
+            <span><a href="">QQ</a></span>
+            <span><a href="">微博</a></span>
+        </div>
+    </div>
+</div>
+<main>
+    <section class="sec-nav">
+        <nav class="container">
+            <a href="DF.html">网站首页</a>
+            <a href="#" id="ids-s">请登录</a>
+            <a href="注册页面.html">请注册</a>
+            <p class="coll-a">
+                <a href="">我的收藏</a>
+                <a href="">我的关注</a>
+                <a href="">商家支持</a>
+            </p>
+        </nav>
+    </section>
+    <section class="sec-seek">
+        <article class="container">
+            <span class="logo"><img src="img/six-img.png" alt="">黑科技商城</span>
+            <span class="seek-goods">
+                <form action="">
+                    <input type="text" placeholder="请输入商品名" id="in" >
+                </form>
+                <span class="seek-txt" id="pu">搜索</span>
+                <span class="seek-goods-img"><img src="img/TB1.png" alt=""></span>
+
+            </span>
+        </article>
+
+    </section>
+
+    <section class="sec-list">
+        <article class="container">
+            <ul class="list-inline src-list-ul">
+                <li><a href="#">新首发</a></li>
+                <li><a href="#">酷玩街</a></li>
+                <li><a href="#">科技馆</a></li>
+            </ul>
+
+            <div class='banner-box container'>
+                <ul class='img'>
+                    <li><img src="img/TB20.jpg" alt="" /></li>
+                    <li><img src="img/TB2S.jpg" alt="" /></li>
+                    <li><img src="video/si.jpg" alt="" style="width: 1190px;" /></li>
+                </ul>
+                <ul class='li'></ul>
+                <div class='but but-left'>&lt;</div>
+                <div class='but but-right'>&gt;</div>
+                <div class='bar'></div>
+            </div>
+
+
+
+
+        </article>
+    </section>
+    <section class="sec-df">
+        <article class="container">
+            <h2 style="margin-bottom:20px;">
+                <span style="cursor: pointer;" id="Bbtn" class="public">新首发</span>
+                <span style="cursor: pointer;" id="Abtn" class="public">免费试用</span>
+            </h2>
+            <ul class="list-unstyled"  id="blos" style="border-top: 1px solid red">
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit" style=" border-left: 1px solid red;">
+                    <img src="tm/1.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">机械师夜鹰F117-F1K金属游戏本</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>6799</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/2.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">TP-LINK双频1750M无线路由 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>219</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/3.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">【新品开售】Meizu/魅族 魅蓝X ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>1199</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/4.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">雷蛇黑寡妇蜘蛛幻彩版V2机械键盘</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>299</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit" style=" border-left: 1px solid red;">
+                    <img src="tm/11.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">Haier小海贝洗碗机免预留进出水台 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>2899</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/12.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">【新品预售 年度旗舰】Meizu/魅 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>2399</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/13.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">360WIFI扩展器</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>59</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/14.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">BANG＆OLUFSEN/邦及欧路夫 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>3890</span>
+                        <span class="xpkw-btn">首发结束</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+
+            </ul>
+            <ul class="list-unstyled" id="disnone"  style="border-top: 1px solid red">
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit" style=" border-left: 1px solid red;">
+                    <img src="tm/ad.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">美的大通量净水器新品上市</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>7998</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/ad2.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">德国格丽思旗舰高配</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>7980</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/ad3.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">福玛特大吸力扫地机器人试用</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>5980</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/4.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">雷蛇黑寡妇蜘蛛幻彩版V2机械键盘</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>299</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit" style=" border-left: 1px solid red;">
+                    <img src="tm/11.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">Haier小海贝洗碗机免预留进出水台 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>2899</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/12.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">【新品预售 年度旗舰】Meizu/魅 ...</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>2399</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/13.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">360WIFI扩展器</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>59</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">新品上市</div>
+                </li>
+                <li class="col-lg-3 col-sm-6 col-lg-xs-12 posit">
+                    <img src="tm/ad2.jpg" alt="">
+                    <p ><a href="#" class="xpkw-txt">德国格丽思旗舰高配</a></p>
+                    <div>
+                        <span class="xpkw-price"><i>¥</i>7980</span>
+                        <span class="xpkw-btn">免费申请</span>
+                    </div>
+                    <div class="news">免费试用</div>
+                </li>
+
+
+            </ul>
+        </article>
+    </section>
+    <section class="fall">
+        <article class="container">
+            <div class="pledge">
+                <div>
+                <span><img src="tm/品质保证.png" alt=""></span>
+                <span>品质保证</span>
+                </div>
+                <div>
+                <span><img src="tm/包邮or7天退货.png" alt=""></span>
+                <span>包邮or7天退货</span>
+                </div>
+                <div>
+                <span><img src="tm/7天.png" alt=""></span>
+                <span>7天</span>
+                </div>
+
+            </div>
+        </article>
+    </section>
+    <section class="main-last">
+        <article class="container">
+            <div class="main-div">
+                <ul>
+                <li class="main-last-li">会员中心</li>
+                <li>会员制度</li>
+                <li>会员优惠</li>
+                <li>账户管理</li>
+                <li>密码管理</li>
+            </ul>
+                <ul>
+                    <li class="main-last-li">购物指南</li>
+                    <li>发票</li>
+                    <li>尺码对照</li>
+                    <li>尺码解读</li>
+                    <li>商品咨询</li>
+                </ul>
+                <ul>
+                    <li class="main-last-li">支付方式</li>
+                    <li>在线支付</li>
+                    <li>货到付款</li>
+                    <li>分期支付</li>
+
+                </ul>
+                <ul>
+                    <li class="main-last-li">配送方式</li>
+                    <li>配送说明</li>
+                    <li>运费说明</li>
+                    <li>验货签收</li>
+                    <li>收货样式</li>
+
+                </ul>
+            </div>
+            <div class="brand">©HEIKEJIBABA MUX, powered by heikejibaba THX <a href="">科技商城</a></div>
+        </article>
+    </section>
+
+
+
+
+</main>
+</body>
+</html>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+   <script type="text/javascript">
+   var oSj = 7340;
+   var i = 0;
+   var bar = $(".banner-box .bar");
+   var oImg = $(".banner-box .img");//获取图片盒子
+   var oImgfirst= $('.banner-box .img li:first').clone();//复制第一张图片
+   oImg.append(oImgfirst);//将复制的第一张图片放到最后
+   var imgNum = $(".banner-box .img li").size();//获取图片数量
+   console.log(imgNum);
+
+   //根据图片个数添加圆点按钮
+   for(var j=1;j<=imgNum-1;j++){
+       $('.banner-box .li').append('<li></li>');
+   }
+
+   //给第一个按钮添加选中样式
+   $('.banner-box .li li:first').addClass('index');
+
+
+   //点击向右轮播
+   $(".but-right").click(function(){
+       int();
+   });
+
+   //点击向左轮播
+   $(".but-left").click(function(){
+       bar.stop().css('width',0);
+       i--;
+       if(i == -1){
+           $('.banner-box .img').css('left',-(imgNum-1)*1190);//用CSS进行图片位置变换，达到无缝拼接效果
+           i = imgNum-2;
+       }
+       oImg.stop().animate({left:-i*1190},1000);//动画效果
+       clearInterval(oTime);
+       oTime = setInterval(function(){
+           int();
+       },oSj);
+       barAniMate();//进度条函数动画效果
+       $(".banner-box .li li").eq(i).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+   });
+
+   //鼠标移动到圆点后轮播
+   $(".banner-box .li li").hover(function() {
+       clearInterval(oTime);//清除定时器
+       bar.stop().css('width',0);
+       var index = $(this).index();
+       i=index;
+       oImg.stop().animate({left:-index*1190},1000);//动画效果
+       bar.stop().css('width',0);
+       $(this).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+   },function(){
+       barAniMate();//进度条函数动画效果
+       oTime = setInterval(function(){
+           int();
+       },oSj);
+   });
+
+   //自动轮播
+   var oTime = setInterval(function(){
+       int();
+   },oSj);
+
+   barAniMate();//进度条函数动画效果
+
+   //进度条函数动画效果
+   function barAniMate(){
+       bar.animate({width:'100%'},oSj,function(){
+           $(this).css('width',0);
+       });
+   }
+
+   //自动轮播函数
+   function int(){
+       bar.stop().css('width',0);
+       i++;
+       if(i == imgNum){
+           oImg.css('left',0);//用CSS进行图片位置变换，达到无缝拼接效果
+           i = 1;
+       }
+       oImg.stop().animate({left:-i*1190},1000);//动画效果
+       barAniMate();//进度条函数动画效果
+       clearInterval(oTime);
+       oTime = setInterval(function(){
+           int();
+       },oSj);
+       if(i == imgNum-1){
+           $(".banner-box .li li").eq(0).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+
+       }else{
+           $(".banner-box .li li").eq(i).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+       }
+   }
+</script>
+
+<script>
+    $(function(){
+        var inp= $("#in");
+        var pu = $("#pu");
+        var uls = $("#ul");
+        inp.keyup(function(){
+
+            var txt = inp.val();
+            $.ajax({
+                type:"get",
+                url:"https://suggest.taobao.com/sug?code=utf-8&q="+txt,
+                dataType:"jsonp",
+                success:function(data){
+                    uls.empty();
+                    var re = data.result;
+                    console.log(data);
+                    console.log(re);
+                    $.each(re,function(i,v){
+                        var lis = $("<li></li>");
+                        var lk = $('<a href="https://s.taobao.com/search?q='+v[0]+'"></a>');
+                        lk.html(v[0]);
+                        lis.append(lk);
+                        uls.append(lis);
+                    })
+
+                }
+            })
+        });
+
+        $(document).click(function(){
+            uls.empty()
+        });
+        inp.click(function(e){
+            e.stopPropagation();
+            inp.keyup()
+        })
+        pu.click(function(){
+            var txt = inp.val();
+            window.location.href = "https://s.taobao.com/search?q="+txt;
+        });
+        //回车键事件
+        document.onkeydown = function(e){
+            var ev = document.all ? window.event : e;
+            if(ev.keyCode==13) {
+                pu.click()
+            }
+        };
+        var disnone = document.getElementById("disnone");
+        var Abtn = document.getElementById("Abtn");
+        var blos = document.getElementById("blos");
+        var Bbtn= document.getElementById("Bbtn");
+        Abtn.onclick=function(){
+            disnone.style.display="block";
+            blos.style.display="none";
+
+        }
+        Bbtn.onclick=function(){
+
+            blos.style.display="block";
+            disnone.style.display="none";
+        }
+
+        //切换商品
+        var dis= document.querySelector("#dis");
+        var disi= $("#dis");
+        var diss= document.querySelector("#ids-s");
+        var nont = document.getElementById("nont");
+        nont.onclick=()=>{
+            dis.style.display="none"
+        }
+        console.log(nont);
+        diss.onclick=function(){
+            disi.slideDown();
+            dis.style.display="block"
+        }
+    })
+</script>
+
+
